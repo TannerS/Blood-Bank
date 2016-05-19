@@ -74,5 +74,10 @@ namespace CS408Project
             // Hide();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
