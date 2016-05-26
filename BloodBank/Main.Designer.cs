@@ -31,8 +31,8 @@
             this.register_button = new System.Windows.Forms.Button();
             this.view_button = new System.Windows.Forms.Button();
             this.search_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.log_out_button = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // register_button
@@ -65,32 +65,33 @@
             this.search_button.UseVisualStyleBackColor = true;
             this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
-            // button1
+            // log_out_button
             // 
-            this.button1.Location = new System.Drawing.Point(112, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 50);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = true;
+            this.log_out_button.Location = new System.Drawing.Point(112, 303);
+            this.log_out_button.Name = "log_out_button";
+            this.log_out_button.Size = new System.Drawing.Size(308, 50);
+            this.log_out_button.TabIndex = 3;
+            this.log_out_button.Text = "Log Out";
+            this.log_out_button.UseVisualStyleBackColor = true;
+            this.log_out_button.Click += new System.EventHandler(this.log_out_button_Click);
             // 
-            // button2
+            // exit_button
             // 
-            this.button2.Location = new System.Drawing.Point(112, 392);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(308, 50);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.exit_button.Location = new System.Drawing.Point(112, 392);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(308, 50);
+            this.exit_button.TabIndex = 4;
+            this.exit_button.Text = "Exit";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 507);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(556, 507);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.log_out_button);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.view_button);
             this.Controls.Add(this.register_button);
@@ -105,7 +106,7 @@
         private System.Windows.Forms.Button register_button;
         private System.Windows.Forms.Button view_button;
         private System.Windows.Forms.Button search_button;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button log_out_button;
+        private System.Windows.Forms.Button exit_button;
     }
 }

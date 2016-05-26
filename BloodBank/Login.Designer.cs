@@ -110,7 +110,6 @@
         #endregion
 
         private System.Windows.Forms.Button login_button;
-        private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Label username_label;
         private System.Windows.Forms.Label password_label;
         private System.Windows.Forms.TextBox username_input;
