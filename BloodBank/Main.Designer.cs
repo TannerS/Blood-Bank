@@ -96,7 +96,7 @@
             this.Controls.Add(this.view_button);
             this.Controls.Add(this.register_button);
             this.Name = "Main";
-            this.Text = "Blood Bank Management System";
+            this.Text = "Management System";
             this.ResumeLayout(false);
 
         }

@@ -70,6 +70,7 @@
             this.username_input.Name = "username_input";
             this.username_input.Size = new System.Drawing.Size(528, 38);
             this.username_input.TabIndex = 5;
+
             // 
             // password_input
             // 

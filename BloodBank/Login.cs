@@ -21,20 +21,20 @@ namespace CS408Project
             InitializeComponent();
             admins = new Dictionary<string, string>();
             setAdmins();
+
+
             main = new Main();
-            admins = new Dictionary<string, string>();
+            
         }
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("debug 1");
             // http://www.dotnetperls.com/dictionary
             string password;
             // http://www.tutorialspoint.com/csharp/csharp_output_parameters.htm
-            if (admins.TryGetValue(username_input.Text.Trim(), out password))
+            if (admins.TryGetValue(username_input.Text, out password))
             {
-                MessageBox.Show("Incorrect Login");
-                if (password_input.Text.Trim().Equals(password))
+                if (password_input.Text.Equals(password))
                 {
                     main.Show();
                     this.Hide();
@@ -62,8 +62,8 @@ namespace CS408Project
 
         private void setAdmins()
         {
-            admins.Add("TannerS", "password");
-            admins.Add("Admin", "admin");
+            this.admins.Add("TannerS", "password");
+            this.admins.Add("Admin", "admin");
         }
     }
 }
