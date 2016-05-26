@@ -21,8 +21,6 @@ namespace CS408Project
             InitializeComponent();
             admins = new Dictionary<string, string>();
             setAdmins();
-
-
             main = new Main();
             
         }

@@ -45,7 +45,23 @@ namespace CS408Project
 
         private void search_button_Click(object sender, EventArgs e)
         {
+            linqSearch(name_box.Text.Trim(),
+                id_box.Text.Trim(), 
+                city_box.Text.Trim(), 
+                state_box.Text.Trim(), 
+                blood_type_box.Text.Trim() );
+        }
+
+        private void linqSearch(string name, string ID, string city, string state, string type)
+        {
+
+            
+
 
         }
+
     }
+
+
+
 }

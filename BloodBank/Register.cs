@@ -13,7 +13,7 @@ namespace CS408Project
     public partial class Register : Form, Util
     {
         private List<Donors> list;
-        private bool gender;
+        
 
         public Register()
         {
@@ -27,7 +27,7 @@ namespace CS408Project
 
         private void cancel_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
 
             foreach (Form form in Application.OpenForms)
             {
@@ -42,6 +42,9 @@ namespace CS408Project
 
         private void create_button_Click(object sender, EventArgs e)
         {
+            
+
+
             Donors donor = new Donors();
 
             short  age;
@@ -89,20 +92,10 @@ namespace CS408Project
                 return;
             }
 
-
- 
-            donor.Name = name_box.Text.Trim();
-            donor.Name = name_box.Text.Trim();
-            donor.Name = name_box.Text.Trim();
-            donor.Name = name_box.Text.Trim();
-
-
-
             foreach (Form form in Application.OpenForms)
             {
                 if (form is Main)
                 {
-                    
                     passDonors pass_contacts;
                     Main temp = (Main)form;
                     pass_contacts = temp.setDonors;

@@ -31,7 +31,7 @@ namespace CS408Project
 
         private void exit_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
 
             foreach (Form form in Application.OpenForms)
             {
@@ -46,43 +46,34 @@ namespace CS408Project
         public void setDonors(List<Donors> donors)
         {
             list = donors;
+            setUpList();
         }
-
 
         public void setUpList()
         {
-            if (list != null)
+            if (donor_listview != null)
+                donor_listview.Items.Clear();
+
+            for (int i = 0; i < list.Count; i++)
             {
-                for (int i = 0; i < list.Count; i++)
+                list_view = new ListViewItem(new[]
                 {
+                    list[i].Name.Trim(),
+                    list[i].Age.ToString(),
+                    list[i].ID.Trim(),
+                    list[i].Sex.Trim(),
+                    list[i].Phone.Trim(),
+                    list[i].Address.Trim(),
+                    list[i].City.Trim(),
+                    list[i].State.Trim(),
+                    list[i].Rh.Trim(),
+                    list[i].BloodAmount.ToString(),
+                    list[i].BloodType.Trim()
+                });
 
-
-                    list_view = new ListViewItem(new[]
-                    {
-                        list[i].Name.Trim(),
-                        list[i].Age.ToString(),
-                        list[i].ID.Trim(),
-                        list[i].Sex.Trim(),
-                        list[i].Phone.Trim(),
-                        list[i].Address.Trim(),
-                        list[i].City.Trim(),
-                        list[i].State.Trim(),
-                        list[i].Rh.Trim(),
-                        list[i].BloodAmount.ToString(),
-                        list[i].BloodType.Trim()
-                    });
-
-                    donor_listview.Items.Add(list_view);
-                }
-
-                
+                donor_listview.Items.Add(list_view);
             }
-
         }
-
-
-
-
     }
 }
 

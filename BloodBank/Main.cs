@@ -21,6 +21,8 @@ namespace CS408Project
 
         public Main()
         {
+            MessageBox.Show("MAIN CONSTRUCTOR");
+
             InitializeComponent();
             list = new List<Donors>();
             setTestContacts(ref list);
@@ -28,7 +30,7 @@ namespace CS408Project
   
 
             // declare delegate
-            passDonors pass_contacts;
+            //passDonors pass_contacts;
             // declare forms
             reg = new Register();
             search = new Search();
@@ -40,15 +42,11 @@ namespace CS408Project
             //  pass_contacts = new passDonors(reg.setDonors);
 
 
-            pass_contacts = reg.setDonors;
-            pass_contacts += search.setDonors;
-            pass_contacts += donors.setDonors;
+            //pass_contacts = reg.setDonors;
+            //pass_contacts += search.setDonors;
+            //pass_contacts += donors.setDonors;
             // call and set array lsit for all
-            pass_contacts(list);
-
-            donors.setUpList();
-
-
+            //pass_contacts(list);
         }
 
         void Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -60,27 +58,35 @@ namespace CS408Project
 
         private void register_button_Click(object sender, EventArgs e)
         {
+            passDonors pass_contacts;
+            pass_contacts = reg.setDonors;
+            pass_contacts(list);
             reg.Show();
-            Close();
+            Hide();
         }
 
         private void search_button_Click(object sender, EventArgs e)
         {
+            passDonors pass_contacts;
+            pass_contacts = search.setDonors;
+            pass_contacts(list);
             search.Show();
-            this.Close();
-           
+            Hide();
+
         }
 
         private void view_button_Click(object sender, EventArgs e)
         {
+            passDonors pass_contacts;
+            pass_contacts = donors.setDonors;
+            pass_contacts(list);
             donors.Show();
-            this.Close();
-           
+            Hide();
         }
 
         private void log_out_button_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
 
             foreach (Form form in Application.OpenForms)
             {
@@ -103,8 +109,6 @@ namespace CS408Project
 
             for (int i = 0; i < 3; i++)
             {
-                //System.Windows.Forms.MessageBox.Show("FULLING ARRAY");
-
                 temp = new Donors();
                 temp.Name = "Name_" + i;
                 temp.Phone = "Phone_" + i;
@@ -124,6 +128,7 @@ namespace CS408Project
 
         public void setDonors(List<Donors> donors)
         {
+     
             list = donors;
         }
     }
