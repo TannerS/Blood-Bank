@@ -23,7 +23,6 @@ namespace CS408Project
             InitializeComponent();
         }
 
-
         void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

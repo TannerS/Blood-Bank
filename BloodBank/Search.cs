@@ -45,53 +45,86 @@ namespace CS408Project
 
         private void search_button_Click(object sender, EventArgs e)
         {
-            linqSearch(name_box.Text.Trim(),
-                id_box.Text.Trim(), 
-                city_box.Text.Trim(), 
-                state_box.Text.Trim(), 
-                blood_type_box.Text.Trim() );
-        }
 
-        private void linqSearch(string name, string ID, string city, string state, string type)
-        {
+            if (id_box.Text.Trim() != string.Empty)
+            {
+                MessageBox.Show("DEBUG");
+                setResults(searchComboOne(id_box.Text.Trim()));
+            }
+            else if ((lname_box.Text.Trim() != string.Empty) && (city_box.Text.Trim() != string.Empty))
+            {
+                MessageBox.Show("DEBUG111");
+                setResults(searchComboTwo(lname_box.Text.Trim(), city_box.Text.Trim()));
+            }
+            else if ((lname_box.Text.Trim() != string.Empty) && (state_box.Text.Trim() != string.Empty))
+            {
+                MessageBox.Show("DEBUG222");
+                setResults(searchComboThree(lname_box.Text.Trim(), state_box.Text.Trim()));
+            }
+            else if ((lname_box.Text.Trim() != string.Empty) && (blood_type_box.Text.Trim() != string.Empty))
+            {
+                MessageBox.Show("DEBUG333");
+                setResults(searchComboThree(lname_box.Text.Trim(), blood_type_box.Text.Trim()));
+            }
+            else
+            {
+                MessageBox.Show("Information not properly inserted");
+                return;
+            }
+
 
             
 
 
         }
-        private void search(string data1)
-        {
 
+        private IEnumerable<Donors> searchComboOne(string ID)
+        {
+            return list.Where(test => test.ID.Equals(ID));
         }
 
-
-
-
-        private void search(string data1)
+        private IEnumerable<Donors> searchComboTwo(string lname, string city)
         {
-
+            return list.Where(test => test.LName.Equals(lname) && test.City.Equals(city));
         }
 
-        private void search(string data1, string data2)
+        private IEnumerable<Donors> searchComboThree(string lname, string state)
         {
-
+            return list.Where(test => test.LName.Equals(lname) && test.City.Equals(state));
         }
 
-        private void search(string data1, string data2, string data3)
+        private IEnumerable<Donors> searchComboFour(string lname, string type)
         {
-
+            return list.Where(test => test.LName.Equals(lname) && test.City.Equals(type));
         }
 
-        private void search(string data1, string data2, string data3, string data4)
+        private void setResults(IEnumerable<Donors> temp)
         {
+            if (search_listview != null)
+                search_listview.Items.Clear();
+            ListViewItem list_view;
 
+            foreach (Donors d in temp)
+            {
+                list_view = new ListViewItem(new[]
+                {
+                    d.FName,
+                    d.LName,
+                    d.Age.ToString(),
+                    d.ID,
+                    d.Sex,
+                    d.Phone,
+                    d.Address,
+                    d.City,
+                    d.State,
+                    d.Rh,
+                    d.BloodAmount.ToString(),
+                    d.BloodType
+                });
+
+                search_listview.Items.Add(list_view);
+            }
         }
-
-        private void search(string data1, string data2, string data3, string data4, string data5)
-        {
-
-        }
-
 
     }
 

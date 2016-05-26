@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.register_panel = new System.Windows.Forms.Panel();
+            this.lname_label = new System.Windows.Forms.Label();
+            this.lname_box = new System.Windows.Forms.TextBox();
             this.gender_group = new System.Windows.Forms.Panel();
             this.female_radio_button = new System.Windows.Forms.RadioButton();
             this.male_radio_button = new System.Windows.Forms.RadioButton();
@@ -59,8 +61,6 @@
             this.id_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lname_label = new System.Windows.Forms.Label();
-            this.lname_box = new System.Windows.Forms.TextBox();
             this.register_panel.SuspendLayout();
             this.gender_group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +99,22 @@
             this.register_panel.Name = "register_panel";
             this.register_panel.Size = new System.Drawing.Size(1596, 615);
             this.register_panel.TabIndex = 1;
+            // 
+            // lname_label
+            // 
+            this.lname_label.AutoSize = true;
+            this.lname_label.Location = new System.Drawing.Point(16, 139);
+            this.lname_label.Name = "lname_label";
+            this.lname_label.Size = new System.Drawing.Size(151, 32);
+            this.lname_label.TabIndex = 39;
+            this.lname_label.Text = "Last Name";
+            // 
+            // lname_box
+            // 
+            this.lname_box.Location = new System.Drawing.Point(179, 133);
+            this.lname_box.Name = "lname_box";
+            this.lname_box.Size = new System.Drawing.Size(605, 38);
+            this.lname_box.TabIndex = 38;
             // 
             // gender_group
             // 
@@ -363,22 +379,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // lname_label
-            // 
-            this.lname_label.AutoSize = true;
-            this.lname_label.Location = new System.Drawing.Point(16, 139);
-            this.lname_label.Name = "lname_label";
-            this.lname_label.Size = new System.Drawing.Size(151, 32);
-            this.lname_label.TabIndex = 39;
-            this.lname_label.Text = "Last Name";
-            // 
-            // lname_box
-            // 
-            this.lname_box.Location = new System.Drawing.Point(179, 133);
-            this.lname_box.Name = "lname_box";
-            this.lname_box.Size = new System.Drawing.Size(605, 38);
-            this.lname_box.TabIndex = 38;
             // 
             // Register
             // 
