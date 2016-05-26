@@ -50,15 +50,17 @@
             this.age_label = new System.Windows.Forms.Label();
             this.city_label = new System.Windows.Forms.Label();
             this.state_label = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
+            this.fname_label = new System.Windows.Forms.Label();
             this.sex_label = new System.Windows.Forms.Label();
             this.blood_type_label = new System.Windows.Forms.Label();
             this.id_label = new System.Windows.Forms.Label();
-            this.name_box = new System.Windows.Forms.TextBox();
+            this.fname_box = new System.Windows.Forms.TextBox();
             this.age_box = new System.Windows.Forms.TextBox();
             this.id_box = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lname_label = new System.Windows.Forms.Label();
+            this.lname_box = new System.Windows.Forms.TextBox();
             this.register_panel.SuspendLayout();
             this.gender_group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,6 +68,8 @@
             // 
             // register_panel
             // 
+            this.register_panel.Controls.Add(this.lname_label);
+            this.register_panel.Controls.Add(this.lname_box);
             this.register_panel.Controls.Add(this.gender_group);
             this.register_panel.Controls.Add(this.amount_donated_box);
             this.register_panel.Controls.Add(this.amount_donated_label);
@@ -84,11 +88,11 @@
             this.register_panel.Controls.Add(this.age_label);
             this.register_panel.Controls.Add(this.city_label);
             this.register_panel.Controls.Add(this.state_label);
-            this.register_panel.Controls.Add(this.name_label);
+            this.register_panel.Controls.Add(this.fname_label);
             this.register_panel.Controls.Add(this.sex_label);
             this.register_panel.Controls.Add(this.blood_type_label);
             this.register_panel.Controls.Add(this.id_label);
-            this.register_panel.Controls.Add(this.name_box);
+            this.register_panel.Controls.Add(this.fname_box);
             this.register_panel.Controls.Add(this.age_box);
             this.register_panel.Controls.Add(this.id_box);
             this.register_panel.Location = new System.Drawing.Point(19, 174);
@@ -100,7 +104,7 @@
             // 
             this.gender_group.Controls.Add(this.female_radio_button);
             this.gender_group.Controls.Add(this.male_radio_button);
-            this.gender_group.Location = new System.Drawing.Point(151, 193);
+            this.gender_group.Location = new System.Drawing.Point(179, 227);
             this.gender_group.Name = "gender_group";
             this.gender_group.Size = new System.Drawing.Size(351, 51);
             this.gender_group.TabIndex = 37;
@@ -212,37 +216,37 @@
             // 
             // state_box
             // 
-            this.state_box.Location = new System.Drawing.Point(151, 559);
+            this.state_box.Location = new System.Drawing.Point(179, 559);
             this.state_box.Name = "state_box";
             this.state_box.Size = new System.Drawing.Size(616, 38);
             this.state_box.TabIndex = 21;
             // 
             // city_box
             // 
-            this.city_box.Location = new System.Drawing.Point(151, 500);
+            this.city_box.Location = new System.Drawing.Point(179, 500);
             this.city_box.Name = "city_box";
             this.city_box.Size = new System.Drawing.Size(616, 38);
             this.city_box.TabIndex = 20;
             // 
             // phone_box
             // 
-            this.phone_box.Location = new System.Drawing.Point(151, 259);
+            this.phone_box.Location = new System.Drawing.Point(179, 293);
             this.phone_box.Name = "phone_box";
             this.phone_box.Size = new System.Drawing.Size(605, 38);
             this.phone_box.TabIndex = 19;
             // 
             // address_box
             // 
-            this.address_box.Location = new System.Drawing.Point(151, 319);
+            this.address_box.Location = new System.Drawing.Point(179, 364);
             this.address_box.Multiline = true;
             this.address_box.Name = "address_box";
-            this.address_box.Size = new System.Drawing.Size(616, 154);
+            this.address_box.Size = new System.Drawing.Size(616, 109);
             this.address_box.TabIndex = 18;
             // 
             // address_label
             // 
             this.address_label.AutoSize = true;
-            this.address_label.Location = new System.Drawing.Point(16, 322);
+            this.address_label.Location = new System.Drawing.Point(44, 364);
             this.address_label.Name = "address_label";
             this.address_label.Size = new System.Drawing.Size(119, 32);
             this.address_label.TabIndex = 16;
@@ -251,7 +255,7 @@
             // phone_label
             // 
             this.phone_label.AutoSize = true;
-            this.phone_label.Location = new System.Drawing.Point(16, 262);
+            this.phone_label.Location = new System.Drawing.Point(16, 296);
             this.phone_label.Name = "phone_label";
             this.phone_label.Size = new System.Drawing.Size(98, 32);
             this.phone_label.TabIndex = 15;
@@ -260,7 +264,7 @@
             // age_label
             // 
             this.age_label.AutoSize = true;
-            this.age_label.Location = new System.Drawing.Point(16, 149);
+            this.age_label.Location = new System.Drawing.Point(16, 183);
             this.age_label.Name = "age_label";
             this.age_label.Size = new System.Drawing.Size(66, 32);
             this.age_label.TabIndex = 14;
@@ -284,19 +288,19 @@
             this.state_label.TabIndex = 11;
             this.state_label.Text = "State";
             // 
-            // name_label
+            // fname_label
             // 
-            this.name_label.AutoSize = true;
-            this.name_label.Location = new System.Drawing.Point(16, 90);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(90, 32);
-            this.name_label.TabIndex = 9;
-            this.name_label.Text = "Name";
+            this.fname_label.AutoSize = true;
+            this.fname_label.Location = new System.Drawing.Point(16, 90);
+            this.fname_label.Name = "fname_label";
+            this.fname_label.Size = new System.Drawing.Size(152, 32);
+            this.fname_label.TabIndex = 9;
+            this.fname_label.Text = "First Name";
             // 
             // sex_label
             // 
             this.sex_label.AutoSize = true;
-            this.sex_label.Location = new System.Drawing.Point(16, 212);
+            this.sex_label.Location = new System.Drawing.Point(16, 246);
             this.sex_label.Name = "sex_label";
             this.sex_label.Size = new System.Drawing.Size(64, 32);
             this.sex_label.TabIndex = 7;
@@ -320,23 +324,23 @@
             this.id_label.TabIndex = 4;
             this.id_label.Text = "ID";
             // 
-            // name_box
+            // fname_box
             // 
-            this.name_box.Location = new System.Drawing.Point(151, 90);
-            this.name_box.Name = "name_box";
-            this.name_box.Size = new System.Drawing.Size(605, 38);
-            this.name_box.TabIndex = 3;
+            this.fname_box.Location = new System.Drawing.Point(179, 84);
+            this.fname_box.Name = "fname_box";
+            this.fname_box.Size = new System.Drawing.Size(605, 38);
+            this.fname_box.TabIndex = 3;
             // 
             // age_box
             // 
-            this.age_box.Location = new System.Drawing.Point(151, 143);
+            this.age_box.Location = new System.Drawing.Point(179, 177);
             this.age_box.Name = "age_box";
             this.age_box.Size = new System.Drawing.Size(100, 38);
             this.age_box.TabIndex = 2;
             // 
             // id_box
             // 
-            this.id_box.Location = new System.Drawing.Point(151, 36);
+            this.id_box.Location = new System.Drawing.Point(179, 33);
             this.id_box.Name = "id_box";
             this.id_box.Size = new System.Drawing.Size(100, 38);
             this.id_box.TabIndex = 0;
@@ -359,6 +363,22 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // lname_label
+            // 
+            this.lname_label.AutoSize = true;
+            this.lname_label.Location = new System.Drawing.Point(16, 139);
+            this.lname_label.Name = "lname_label";
+            this.lname_label.Size = new System.Drawing.Size(151, 32);
+            this.lname_label.TabIndex = 39;
+            this.lname_label.Text = "Last Name";
+            // 
+            // lname_box
+            // 
+            this.lname_box.Location = new System.Drawing.Point(179, 133);
+            this.lname_box.Name = "lname_box";
+            this.lname_box.Size = new System.Drawing.Size(605, 38);
+            this.lname_box.TabIndex = 38;
             // 
             // Register
             // 
@@ -396,11 +416,11 @@
         private System.Windows.Forms.Label age_label;
         private System.Windows.Forms.Label city_label;
         private System.Windows.Forms.Label state_label;
-        private System.Windows.Forms.Label name_label;
+        private System.Windows.Forms.Label fname_label;
         private System.Windows.Forms.Label sex_label;
         private System.Windows.Forms.Label blood_type_label;
         private System.Windows.Forms.Label id_label;
-        private System.Windows.Forms.TextBox name_box;
+        private System.Windows.Forms.TextBox fname_box;
         private System.Windows.Forms.TextBox age_box;
         private System.Windows.Forms.TextBox id_box;
         private System.Windows.Forms.Button cancel_button;
@@ -413,5 +433,7 @@
         private System.Windows.Forms.RadioButton female_radio_button;
         private System.Windows.Forms.RadioButton male_radio_button;
         private System.Windows.Forms.Panel gender_group;
+        private System.Windows.Forms.Label lname_label;
+        private System.Windows.Forms.TextBox lname_box;
     }
 }

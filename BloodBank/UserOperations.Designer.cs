@@ -31,7 +31,7 @@
             this.donor_panel = new System.Windows.Forms.Panel();
             this.exit_button = new System.Windows.Forms.Button();
             this.donor_listview = new System.Windows.Forms.ListView();
-            this.Donor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Age = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Sex = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -43,6 +43,7 @@
             this.Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.main_label = new System.Windows.Forms.Label();
+            this.LName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.donor_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,8 @@
             // donor_listview
             // 
             this.donor_listview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Donor,
+            this.FName,
+            this.LName,
             this.Age,
             this.ID,
             this.Sex,
@@ -87,57 +89,67 @@
             this.donor_listview.UseCompatibleStateImageBehavior = false;
             this.donor_listview.View = System.Windows.Forms.View.Details;
             // 
-            // Donor
+            // FName
             // 
-            this.Donor.Text = "Donor";
-            this.Donor.Width = 150;
+            this.FName.Text = "Fname";
+            this.FName.Width = 150;
             // 
             // Age
             // 
+            this.Age.DisplayIndex = 1;
             this.Age.Text = "Age";
             // 
             // ID
             // 
+            this.ID.DisplayIndex = 2;
             this.ID.Text = "ID";
             this.ID.Width = 100;
             // 
             // Sex
             // 
+            this.Sex.DisplayIndex = 3;
             this.Sex.Text = "Sex";
             this.Sex.Width = 100;
             // 
             // Phone
             // 
+            this.Phone.DisplayIndex = 4;
             this.Phone.Text = "Phone";
             this.Phone.Width = 120;
             // 
             // Address
             // 
+            this.Address.DisplayIndex = 5;
             this.Address.Text = "Address";
             this.Address.Width = 250;
             // 
             // City
             // 
+            this.City.DisplayIndex = 6;
             this.City.Text = "City";
             this.City.Width = 100;
             // 
             // State
             // 
+            this.State.DisplayIndex = 7;
             this.State.Text = "State";
             this.State.Width = 100;
             // 
             // Rh
             // 
+            this.Rh.DisplayIndex = 8;
             this.Rh.Text = "Rh Factor";
             this.Rh.Width = 150;
             // 
             // Amount
             // 
+            this.Amount.DisplayIndex = 9;
             this.Amount.Text = "Liters Donated";
             this.Amount.Width = 200;
             // 
             // Type
             // 
+            this.Type.DisplayIndex = 10;
             this.Type.Text = "Blood Group";
             this.Type.Width = 180;
             // 
@@ -149,6 +161,11 @@
             this.main_label.Size = new System.Drawing.Size(106, 32);
             this.main_label.TabIndex = 3;
             this.main_label.Text = "Donors";
+            // 
+            // LName
+            // 
+            this.LName.Text = "LName";
+            this.LName.Width = 150;
             // 
             // UserOperations
             // 
@@ -171,7 +188,7 @@
         private System.Windows.Forms.Label main_label;
         private System.Windows.Forms.ListView donor_listview;
         private System.Windows.Forms.Button exit_button;
-        private System.Windows.Forms.ColumnHeader Donor;
+        private System.Windows.Forms.ColumnHeader FName;
         private System.Windows.Forms.ColumnHeader Age;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Sex;
@@ -182,5 +199,6 @@
         private System.Windows.Forms.ColumnHeader Rh;
         private System.Windows.Forms.ColumnHeader Amount;
         private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.ColumnHeader LName;
     }
 }

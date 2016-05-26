@@ -58,7 +58,8 @@ namespace CS408Project
             {
                 list_view = new ListViewItem(new[]
                 {
-                    list[i].Name.Trim(),
+                    list[i].FName.Trim(),
+                    list[i].LName.Trim(),
                     list[i].Age.ToString(),
                     list[i].ID.Trim(),
                     list[i].Sex.Trim(),

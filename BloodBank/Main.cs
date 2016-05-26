@@ -21,27 +21,18 @@ namespace CS408Project
 
         public Main()
         {
-            MessageBox.Show("MAIN CONSTRUCTOR");
-
             InitializeComponent();
             list = new List<Donors>();
             setTestContacts(ref list);
-
-  
-
             // declare delegate
             //passDonors pass_contacts;
             // declare forms
             reg = new Register();
             search = new Search();
             donors = new UserOperations();
-
-
             // set deletgates to work on these methods
             // for each class at same time
             //  pass_contacts = new passDonors(reg.setDonors);
-
-
             //pass_contacts = reg.setDonors;
             //pass_contacts += search.setDonors;
             //pass_contacts += donors.setDonors;
@@ -107,10 +98,11 @@ namespace CS408Project
         {
             Donors temp;
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 temp = new Donors();
-                temp.Name = "Name_" + i;
+                temp.FName = "First_Name_" + i;
+                temp.LName = "Last_Name_" + i;
                 temp.Phone = "Phone_" + i;
                 temp.Age = (short)(i * 10);
                 temp.ID = "ID_" + i;
@@ -124,11 +116,100 @@ namespace CS408Project
                 donors.Add(temp);
             }
 
+            temp = new Donors();
+            temp.FName = "Chris";
+            temp.LName = "Hemsworth";
+            temp.Phone = "123456789";
+            temp.Age = (short)32;
+            temp.ID = "987654321";
+            temp.BloodAmount = (short)10;
+            temp.BloodType = "O";
+            temp.Rh = "Positive";
+            temp.Sex = "Male";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
+            temp = new Donors();
+            temp.FName = "Chris";
+            temp.LName = "Evans";
+            temp.Phone = "4342424";
+            temp.Age = (short)54;
+            temp.ID = "954353";
+            temp.BloodAmount = (short)30;
+            temp.BloodType = "A";
+            temp.Rh = "Positive";
+            temp.Sex = "Male";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
+            temp = new Donors();
+            temp.FName = "Chris";
+            temp.LName = "Pratt";
+            temp.Phone = "0000000";
+            temp.Age = (short)54;
+            temp.ID = "99999";
+            temp.BloodAmount = (short)30;
+            temp.BloodType = "A";
+            temp.Rh = "Positive";
+            temp.Sex = "Male";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
+            temp = new Donors();
+            temp.FName = "Tanner";
+            temp.LName = "Summers";
+            temp.Phone = "111111";
+            temp.Age = (short)24;
+            temp.ID = "2222222";
+            temp.BloodAmount = (short)6;
+            temp.BloodType = "O";
+            temp.Rh = "Positive";
+            temp.Sex = "Male";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
+            temp = new Donors();
+            temp.FName = "Terry";
+            temp.LName = "Summers";
+            temp.Phone = "3333333";
+            temp.Age = (short)54;
+            temp.ID = "44444";
+            temp.BloodAmount = (short)26;
+            temp.BloodType = "A";
+            temp.Rh = "Positive";
+            temp.Sex = "Male";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
+            temp = new Donors();
+            temp.FName = "Trisha";
+            temp.LName = "Summers";
+            temp.Phone = "4444444";
+            temp.Age = (short)54;
+            temp.ID = "555555";
+            temp.BloodAmount = (short)29;
+            temp.BloodType = "A";
+            temp.Rh = "Positive";
+            temp.Sex = "Female";
+            temp.Address = "Fake Street";
+            temp.City = "Fake City";
+            temp.State = "Fake State";
+            donors.Add(temp);
+
         }
 
         public void setDonors(List<Donors> donors)
         {
-     
             list = donors;
         }
     }

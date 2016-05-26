@@ -53,7 +53,8 @@ namespace CS408Project
                 short amount;
                 if (Int16.TryParse(amount_donated_box.Text.Trim(), out amount))
                 {
-                    donor.Name = name_box.Text.Trim();
+                    donor.FName = fname_box.Text.Trim();
+                    donor.LName = lname_box.Text.Trim();
                     donor.ID = id_box.Text.Trim();
                     donor.Age = age;
                     donor.Phone = phone_box.Text.Trim();

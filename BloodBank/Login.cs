@@ -14,15 +14,13 @@ namespace CS408Project
     {
         private Main main;
         private Dictionary<string, string> admins;
-
-
+        
         public Login()
         {
             InitializeComponent();
             admins = new Dictionary<string, string>();
             setAdmins();
             main = new Main();
-            
         }
 
         private void login_button_Click(object sender, EventArgs e)
@@ -42,8 +40,6 @@ namespace CS408Project
             }
             else
                 MessageBox.Show("Incorrect Username");
-
-
         }
 
         private void close_button_Click(object sender, EventArgs e)

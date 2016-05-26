@@ -9,7 +9,8 @@ namespace CS408Project
     public class Donors
     {
         public string ID { get; set; }
-        public string Name { get; set; }
+        public string FName { get; set; }
+        public string LName { get; set; }
         public short Age { get; set; }
         // true = male, false = female
         public String Sex { get; set; }
