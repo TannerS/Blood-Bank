@@ -12,13 +12,13 @@ namespace CS408Project
         public string Name { get; set; }
         public short Age { get; set; }
         // true = male, false = female
-        public bool Sex { get; set; }
+        public String Sex { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
         // true = positive, false = negative
-        public bool Rh { get; set; }
+        public String Rh { get; set; }
         // in liters
         public short BloodAmount { get; set; }
         public string BloodType { get; set; }

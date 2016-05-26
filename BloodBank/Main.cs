@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CS408Project
 {
-    delegate void passDonors(List<Donors> donors);
 
-    public partial class Main : Form
+
+    public partial class Main : Form, Util
     {
         private Register reg;
         private Search search;
@@ -44,12 +44,10 @@ namespace CS408Project
             pass_contacts += search.setDonors;
             pass_contacts += donors.setDonors;
             // call and set array lsit for all
-           
-           
-
             pass_contacts(list);
 
             donors.setUpList();
+
 
         }
 
@@ -114,14 +112,19 @@ namespace CS408Project
                 temp.ID = "ID_" + i;
                 temp.BloodAmount = (short)(i * 5 - 23 / 4);
                 temp.BloodType = "BloodType_" + (i + 1);
-                temp.Rh = true;
-                temp.Sex = false;
+                temp.Rh = "Positive";
+                temp.Sex = "Male";
                 temp.Address = "Address_" + i;
                 temp.City = "City_" + i;
                 temp.State = "State_" + i;
                 donors.Add(temp);
             }
 
+        }
+
+        public void setDonors(List<Donors> donors)
+        {
+            list = donors;
         }
     }
 }

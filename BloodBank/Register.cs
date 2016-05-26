@@ -13,6 +13,7 @@ namespace CS408Project
     public partial class Register : Form, Util
     {
         private List<Donors> list;
+        private bool gender;
 
         public Register()
         {
@@ -38,14 +39,98 @@ namespace CS408Project
             }
         }
 
+
         private void create_button_Click(object sender, EventArgs e)
         {
+            Donors donor = new Donors();
 
+            short  age;
+            if (Int16.TryParse(age_box.Text.Trim(), out age))
+            {
+                short amount;
+                if (Int16.TryParse(amount_donated_box.Text.Trim(), out amount))
+                {
+                    donor.Name = name_box.Text.Trim();
+                    donor.ID = id_box.Text.Trim();
+                    donor.Age = age;
+                    donor.Phone = phone_box.Text.Trim();
+                    donor.Address = address_box.Text.Trim();
+                    donor.City = city_box.Text.Trim();
+                    donor.State = state_box.Text.Trim();
+                    donor.BloodAmount = amount;
+                    donor.BloodType = blood_type_list.Text;
+
+                    if (male_radio_button.Checked)
+                        donor.Sex = "Male";
+                    else if (female_radio_button.Checked)
+                        donor.Sex = "female";
+                    else
+                        donor.Sex = "";
+
+                    if (pos_radio_button.Checked)
+                        donor.Rh = "Positive";
+                    else if (neg_radio_button.Checked)
+                        donor.Rh = "Negative";
+                    else
+                        donor.Rh = "";
+
+                    list.Add(donor);
+
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Amount");
+                    return;
+                }
+            }
+            else
+            { 
+                MessageBox.Show("Incorrect Age");
+                return;
+            }
+
+
+ 
+            donor.Name = name_box.Text.Trim();
+            donor.Name = name_box.Text.Trim();
+            donor.Name = name_box.Text.Trim();
+            donor.Name = name_box.Text.Trim();
+
+
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is Main)
+                {
+                    
+                    passDonors pass_contacts;
+                    Main temp = (Main)form;
+                    pass_contacts = temp.setDonors;
+                    pass_contacts(list);
+                    form.Show();
+                    Hide();
+                    return;
+                }
+            }
         }
 
         public void setDonors(List<Donors> donors)
         {
             list = donors;
+        }
+        private void male_radio_button_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void neg_pos_button_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pos_radio_button_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

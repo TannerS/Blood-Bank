@@ -55,20 +55,19 @@ namespace CS408Project
             {
                 for (int i = 0; i < list.Count; i++)
                 {
-                    string sex = (list[i].Sex) ? "Male" : "Female";
-                    string Rh = (list[i].Rh) ? "Positive" : "Negative";
+
 
                     list_view = new ListViewItem(new[]
                     {
                         list[i].Name.Trim(),
                         list[i].Age.ToString(),
                         list[i].ID.Trim(),
-                        sex,
+                        list[i].Sex.Trim(),
                         list[i].Phone.Trim(),
                         list[i].Address.Trim(),
                         list[i].City.Trim(),
                         list[i].State.Trim(),
-                        Rh,
+                        list[i].Rh.Trim(),
                         list[i].BloodAmount.ToString(),
                         list[i].BloodType.Trim()
                     });

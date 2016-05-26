@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace CS408Project
 {
+    delegate void passDonors(List<Donors> donors);
+
     interface Util
     {
-        void setDonors(List<Donors> contacts);
+        void setDonors(List<Donors> donors);
 
     }
 }

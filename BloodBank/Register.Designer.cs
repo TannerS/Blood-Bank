@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.register_panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.female_raido_button = new System.Windows.Forms.RadioButton();
+            this.gender_group = new System.Windows.Forms.Panel();
+            this.female_radio_button = new System.Windows.Forms.RadioButton();
             this.male_radio_button = new System.Windows.Forms.RadioButton();
             this.amount_donated_box = new System.Windows.Forms.TextBox();
             this.amount_donated_label = new System.Windows.Forms.Label();
-            this.neg_pos_button = new System.Windows.Forms.RadioButton();
+            this.neg_radio_button = new System.Windows.Forms.RadioButton();
             this.pos_radio_button = new System.Windows.Forms.RadioButton();
             this.rh_factor_label = new System.Windows.Forms.Label();
             this.cancel_button = new System.Windows.Forms.Button();
@@ -60,16 +60,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.register_panel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.gender_group.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // register_panel
             // 
-            this.register_panel.Controls.Add(this.panel1);
+            this.register_panel.Controls.Add(this.gender_group);
             this.register_panel.Controls.Add(this.amount_donated_box);
             this.register_panel.Controls.Add(this.amount_donated_label);
-            this.register_panel.Controls.Add(this.neg_pos_button);
+            this.register_panel.Controls.Add(this.neg_radio_button);
             this.register_panel.Controls.Add(this.pos_radio_button);
             this.register_panel.Controls.Add(this.rh_factor_label);
             this.register_panel.Controls.Add(this.cancel_button);
@@ -96,25 +96,25 @@
             this.register_panel.Size = new System.Drawing.Size(1596, 615);
             this.register_panel.TabIndex = 1;
             // 
-            // panel1
+            // gender_group
             // 
-            this.panel1.Controls.Add(this.female_raido_button);
-            this.panel1.Controls.Add(this.male_radio_button);
-            this.panel1.Location = new System.Drawing.Point(151, 193);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 51);
-            this.panel1.TabIndex = 37;
+            this.gender_group.Controls.Add(this.female_radio_button);
+            this.gender_group.Controls.Add(this.male_radio_button);
+            this.gender_group.Location = new System.Drawing.Point(151, 193);
+            this.gender_group.Name = "gender_group";
+            this.gender_group.Size = new System.Drawing.Size(351, 51);
+            this.gender_group.TabIndex = 37;
             // 
-            // female_raido_button
+            // female_radio_button
             // 
-            this.female_raido_button.AutoSize = true;
-            this.female_raido_button.Location = new System.Drawing.Point(170, 8);
-            this.female_raido_button.Name = "female_raido_button";
-            this.female_raido_button.Size = new System.Drawing.Size(147, 36);
-            this.female_raido_button.TabIndex = 36;
-            this.female_raido_button.TabStop = true;
-            this.female_raido_button.Text = "Female";
-            this.female_raido_button.UseVisualStyleBackColor = true;
+            this.female_radio_button.AutoSize = true;
+            this.female_radio_button.Location = new System.Drawing.Point(170, 8);
+            this.female_radio_button.Name = "female_radio_button";
+            this.female_radio_button.Size = new System.Drawing.Size(147, 36);
+            this.female_radio_button.TabIndex = 36;
+            this.female_radio_button.TabStop = true;
+            this.female_radio_button.Text = "Female";
+            this.female_radio_button.UseVisualStyleBackColor = true;
             // 
             // male_radio_button
             // 
@@ -126,6 +126,7 @@
             this.male_radio_button.TabStop = true;
             this.male_radio_button.Text = "Male";
             this.male_radio_button.UseVisualStyleBackColor = true;
+            this.male_radio_button.CheckedChanged += new System.EventHandler(this.male_radio_button_CheckedChanged);
             // 
             // amount_donated_box
             // 
@@ -143,16 +144,17 @@
             this.amount_donated_label.TabIndex = 33;
             this.amount_donated_label.Text = "Amount Donated";
             // 
-            // neg_pos_button
+            // neg_radio_button
             // 
-            this.neg_pos_button.AutoSize = true;
-            this.neg_pos_button.Location = new System.Drawing.Point(1338, 38);
-            this.neg_pos_button.Name = "neg_pos_button";
-            this.neg_pos_button.Size = new System.Drawing.Size(165, 36);
-            this.neg_pos_button.TabIndex = 32;
-            this.neg_pos_button.TabStop = true;
-            this.neg_pos_button.Text = "Negative";
-            this.neg_pos_button.UseVisualStyleBackColor = true;
+            this.neg_radio_button.AutoSize = true;
+            this.neg_radio_button.Location = new System.Drawing.Point(1338, 38);
+            this.neg_radio_button.Name = "neg_radio_button";
+            this.neg_radio_button.Size = new System.Drawing.Size(165, 36);
+            this.neg_radio_button.TabIndex = 32;
+            this.neg_radio_button.TabStop = true;
+            this.neg_radio_button.Text = "Negative";
+            this.neg_radio_button.UseVisualStyleBackColor = true;
+            this.neg_radio_button.CheckedChanged += new System.EventHandler(this.neg_pos_button_CheckedChanged);
             // 
             // pos_radio_button
             // 
@@ -164,6 +166,7 @@
             this.pos_radio_button.TabStop = true;
             this.pos_radio_button.Text = "Positive";
             this.pos_radio_button.UseVisualStyleBackColor = true;
+            this.pos_radio_button.CheckedChanged += new System.EventHandler(this.pos_radio_button_CheckedChanged);
             // 
             // rh_factor_label
             // 
@@ -370,8 +373,8 @@
             this.Text = "Register";
             this.register_panel.ResumeLayout(false);
             this.register_panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.gender_group.ResumeLayout(false);
+            this.gender_group.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -404,11 +407,11 @@
         private System.Windows.Forms.Button create_button;
         private System.Windows.Forms.TextBox amount_donated_box;
         private System.Windows.Forms.Label amount_donated_label;
-        private System.Windows.Forms.RadioButton neg_pos_button;
+        private System.Windows.Forms.RadioButton neg_radio_button;
         private System.Windows.Forms.RadioButton pos_radio_button;
         private System.Windows.Forms.Label rh_factor_label;
-        private System.Windows.Forms.RadioButton female_raido_button;
+        private System.Windows.Forms.RadioButton female_radio_button;
         private System.Windows.Forms.RadioButton male_radio_button;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel gender_group;
     }
 }
