@@ -74,6 +74,11 @@ namespace CS408Project
                 donor_listview.Items.Add(list_view);
             }
         }
+
+        private void UserOperations_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

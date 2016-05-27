@@ -59,5 +59,10 @@ namespace CS408Project
             this.admins.Add("TannerS", "password");
             this.admins.Add("Admin", "admin");
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

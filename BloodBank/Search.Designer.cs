@@ -29,24 +29,6 @@
         private void InitializeComponent()
         {
             this.search_listview = new System.Windows.Forms.ListView();
-            this.search_groupbox = new System.Windows.Forms.GroupBox();
-            this.and_label = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.or_label_three = new System.Windows.Forms.Label();
-            this.or_label_two = new System.Windows.Forms.Label();
-            this.city_box = new System.Windows.Forms.TextBox();
-            this.blood_type_label = new System.Windows.Forms.Label();
-            this.city_label = new System.Windows.Forms.Label();
-            this.state_box = new System.Windows.Forms.TextBox();
-            this.state_label = new System.Windows.Forms.Label();
-            this.blood_type_box = new System.Windows.Forms.TextBox();
-            this.or_label = new System.Windows.Forms.Label();
-            this.return_box = new System.Windows.Forms.Button();
-            this.search_button = new System.Windows.Forms.Button();
-            this.id_box = new System.Windows.Forms.TextBox();
-            this.lname_box = new System.Windows.Forms.TextBox();
-            this.lname_label = new System.Windows.Forms.Label();
-            this.id_label = new System.Windows.Forms.Label();
             this.fname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.age = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,7 +40,30 @@
             this.rh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.liters = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.search_groupbox = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lname_box = new System.Windows.Forms.TextBox();
+            this.or_label_five = new System.Windows.Forms.Label();
+            this.lname_label = new System.Windows.Forms.Label();
+            this.fname_box = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.or_label_three = new System.Windows.Forms.Label();
+            this.or_label_two = new System.Windows.Forms.Label();
+            this.city_box = new System.Windows.Forms.TextBox();
+            this.blood_type_label = new System.Windows.Forms.Label();
+            this.city_label = new System.Windows.Forms.Label();
+            this.state_box = new System.Windows.Forms.TextBox();
+            this.state_label = new System.Windows.Forms.Label();
+            this.blood_type_box = new System.Windows.Forms.TextBox();
+            this.fname_label = new System.Windows.Forms.Label();
+            this.and_label = new System.Windows.Forms.Label();
+            this.or_label = new System.Windows.Forms.Label();
+            this.return_box = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
+            this.id_box = new System.Windows.Forms.TextBox();
+            this.id_label = new System.Windows.Forms.Label();
             this.search_groupbox.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,16 +89,67 @@
             this.search_listview.UseCompatibleStateImageBehavior = false;
             this.search_listview.View = System.Windows.Forms.View.Details;
             // 
+            // fname
+            // 
+            this.fname.Text = "FName";
+            this.fname.Width = 180;
+            // 
+            // lname
+            // 
+            this.lname.Text = "LName";
+            this.lname.Width = 180;
+            // 
+            // age
+            // 
+            this.age.Text = "Age";
+            this.age.Width = 80;
+            // 
+            // sex
+            // 
+            this.sex.Text = "Sex";
+            this.sex.Width = 120;
+            // 
+            // phone
+            // 
+            this.phone.Text = "Phone";
+            this.phone.Width = 180;
+            // 
+            // address
+            // 
+            this.address.Text = "Address";
+            this.address.Width = 300;
+            // 
+            // city
+            // 
+            this.city.Text = "City";
+            this.city.Width = 200;
+            // 
+            // state
+            // 
+            this.state.Text = "Dtate";
+            this.state.Width = 100;
+            // 
+            // rh
+            // 
+            this.rh.Text = "Rh";
+            this.rh.Width = 100;
+            // 
+            // liters
+            // 
+            this.liters.Text = "Liters";
+            this.liters.Width = 100;
+            // 
+            // type
+            // 
+            this.type.Text = "Type";
+            // 
             // search_groupbox
             // 
-            this.search_groupbox.Controls.Add(this.and_label);
-            this.search_groupbox.Controls.Add(this.panel1);
+            this.search_groupbox.Controls.Add(this.panel2);
             this.search_groupbox.Controls.Add(this.or_label);
             this.search_groupbox.Controls.Add(this.return_box);
             this.search_groupbox.Controls.Add(this.search_button);
             this.search_groupbox.Controls.Add(this.id_box);
-            this.search_groupbox.Controls.Add(this.lname_box);
-            this.search_groupbox.Controls.Add(this.lname_label);
             this.search_groupbox.Controls.Add(this.id_label);
             this.search_groupbox.Location = new System.Drawing.Point(25, 28);
             this.search_groupbox.Name = "search_groupbox";
@@ -102,14 +158,51 @@
             this.search_groupbox.TabStop = false;
             this.search_groupbox.Text = "Search";
             // 
-            // and_label
+            // panel2
             // 
-            this.and_label.AutoSize = true;
-            this.and_label.Location = new System.Drawing.Point(438, 249);
-            this.and_label.Name = "and_label";
-            this.and_label.Size = new System.Drawing.Size(74, 32);
-            this.and_label.TabIndex = 32;
-            this.and_label.Text = "AND";
+            this.panel2.Controls.Add(this.lname_box);
+            this.panel2.Controls.Add(this.or_label_five);
+            this.panel2.Controls.Add(this.lname_label);
+            this.panel2.Controls.Add(this.fname_box);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.fname_label);
+            this.panel2.Controls.Add(this.and_label);
+            this.panel2.Location = new System.Drawing.Point(6, 154);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(758, 611);
+            this.panel2.TabIndex = 37;
+            // 
+            // lname_box
+            // 
+            this.lname_box.Location = new System.Drawing.Point(190, 19);
+            this.lname_box.Name = "lname_box";
+            this.lname_box.Size = new System.Drawing.Size(528, 38);
+            this.lname_box.TabIndex = 14;
+            // 
+            // or_label_five
+            // 
+            this.or_label_five.AutoSize = true;
+            this.or_label_five.Location = new System.Drawing.Point(434, 77);
+            this.or_label_five.Name = "or_label_five";
+            this.or_label_five.Size = new System.Drawing.Size(57, 32);
+            this.or_label_five.TabIndex = 36;
+            this.or_label_five.Text = "OR";
+            // 
+            // lname_label
+            // 
+            this.lname_label.AutoSize = true;
+            this.lname_label.Location = new System.Drawing.Point(20, 25);
+            this.lname_label.Name = "lname_label";
+            this.lname_label.Size = new System.Drawing.Size(151, 32);
+            this.lname_label.TabIndex = 6;
+            this.lname_label.Text = "Last Name";
+            // 
+            // fname_box
+            // 
+            this.fname_box.Location = new System.Drawing.Point(190, 130);
+            this.fname_box.Name = "fname_box";
+            this.fname_box.Size = new System.Drawing.Size(528, 38);
+            this.fname_box.TabIndex = 35;
             // 
             // panel1
             // 
@@ -121,9 +214,9 @@
             this.panel1.Controls.Add(this.state_box);
             this.panel1.Controls.Add(this.state_label);
             this.panel1.Controls.Add(this.blood_type_box);
-            this.panel1.Location = new System.Drawing.Point(15, 293);
+            this.panel1.Location = new System.Drawing.Point(11, 234);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(731, 354);
+            this.panel1.Size = new System.Drawing.Size(720, 354);
             this.panel1.TabIndex = 33;
             // 
             // or_label_three
@@ -192,10 +285,28 @@
             this.blood_type_box.Size = new System.Drawing.Size(528, 38);
             this.blood_type_box.TabIndex = 28;
             // 
+            // fname_label
+            // 
+            this.fname_label.AutoSize = true;
+            this.fname_label.Location = new System.Drawing.Point(20, 136);
+            this.fname_label.Name = "fname_label";
+            this.fname_label.Size = new System.Drawing.Size(152, 32);
+            this.fname_label.TabIndex = 34;
+            this.fname_label.Text = "First Name";
+            // 
+            // and_label
+            // 
+            this.and_label.AutoSize = true;
+            this.and_label.Location = new System.Drawing.Point(434, 186);
+            this.and_label.Name = "and_label";
+            this.and_label.Size = new System.Drawing.Size(74, 32);
+            this.and_label.TabIndex = 32;
+            this.and_label.Text = "AND";
+            // 
             // or_label
             // 
             this.or_label.AutoSize = true;
-            this.or_label.Location = new System.Drawing.Point(438, 119);
+            this.or_label.Location = new System.Drawing.Point(438, 110);
             this.or_label.Name = "or_label";
             this.or_label.Size = new System.Drawing.Size(57, 32);
             this.or_label.TabIndex = 31;
@@ -228,22 +339,6 @@
             this.id_box.Size = new System.Drawing.Size(528, 38);
             this.id_box.TabIndex = 15;
             // 
-            // lname_box
-            // 
-            this.lname_box.Location = new System.Drawing.Point(194, 196);
-            this.lname_box.Name = "lname_box";
-            this.lname_box.Size = new System.Drawing.Size(528, 38);
-            this.lname_box.TabIndex = 14;
-            // 
-            // lname_label
-            // 
-            this.lname_label.AutoSize = true;
-            this.lname_label.Location = new System.Drawing.Point(24, 202);
-            this.lname_label.Name = "lname_label";
-            this.lname_label.Size = new System.Drawing.Size(151, 32);
-            this.lname_label.TabIndex = 6;
-            this.lname_label.Text = "Last Name";
-            // 
             // id_label
             // 
             this.id_label.AutoSize = true;
@@ -253,71 +348,21 @@
             this.id_label.TabIndex = 0;
             this.id_label.Text = "ID";
             // 
-            // fname
-            // 
-            this.fname.Text = "FName";
-            this.fname.Width = 180;
-            // 
-            // lname
-            // 
-            this.lname.Text = "LName";
-            this.lname.Width = 180;
-            // 
-            // age
-            // 
-            this.age.Text = "Age";
-            this.age.Width = 80;
-            // 
-            // sex
-            // 
-            this.sex.Text = "Sex";
-            this.sex.Width = 120;
-            // 
-            // phone
-            // 
-            this.phone.Text = "Phone";
-            this.phone.Width = 180;
-            // 
-            // address
-            // 
-            this.address.Text = "Address";
-            this.address.Width = 300;
-            // 
-            // city
-            // 
-            this.city.Text = "City";
-            this.city.Width = 200;
-            // 
-            // state
-            // 
-            this.state.Text = "Dtate";
-            this.state.Width = 100;
-            // 
-            // rh
-            // 
-            this.rh.Text = "Rh";
-            this.rh.Width = 100;
-            // 
-            // liters
-            // 
-            this.liters.Text = "Liters";
-            this.liters.Width = 100;
-            // 
-            // type
-            // 
-            this.type.Text = "Type";
-            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2451, 1031);
             this.Controls.Add(this.search_groupbox);
             this.Controls.Add(this.search_listview);
             this.Name = "Search";
             this.Text = "Search";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Search_FormClosed);
             this.search_groupbox.ResumeLayout(false);
             this.search_groupbox.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -356,5 +401,9 @@
         private System.Windows.Forms.ColumnHeader rh;
         private System.Windows.Forms.ColumnHeader liters;
         private System.Windows.Forms.ColumnHeader type;
+        private System.Windows.Forms.Label or_label_five;
+        private System.Windows.Forms.TextBox fname_box;
+        private System.Windows.Forms.Label fname_label;
+        private System.Windows.Forms.Panel panel2;
     }
 }

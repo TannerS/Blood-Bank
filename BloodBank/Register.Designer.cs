@@ -382,8 +382,9 @@
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1661, 802);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -391,6 +392,7 @@
             this.Name = "Register";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Register";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Register_FormClosed);
             this.register_panel.ResumeLayout(false);
             this.register_panel.PerformLayout();
             this.gender_group.ResumeLayout(false);

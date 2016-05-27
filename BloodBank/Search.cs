@@ -45,32 +45,26 @@ namespace CS408Project
 
         private void search_button_Click(object sender, EventArgs e)
         {
-
             if (id_box.Text.Trim() != string.Empty)
-            {
-                MessageBox.Show("DEBUG");
                 setResults(searchComboOne(id_box.Text.Trim()));
-            }
             else if ((lname_box.Text.Trim() != string.Empty) && (city_box.Text.Trim() != string.Empty))
-            {
-                MessageBox.Show("DEBUG111");
                 setResults(searchComboTwo(lname_box.Text.Trim(), city_box.Text.Trim()));
-            }
             else if ((lname_box.Text.Trim() != string.Empty) && (state_box.Text.Trim() != string.Empty))
-            {
-                MessageBox.Show("DEBUG222");
                 setResults(searchComboThree(lname_box.Text.Trim(), state_box.Text.Trim()));
-            }
             else if ((lname_box.Text.Trim() != string.Empty) && (blood_type_box.Text.Trim() != string.Empty))
-            {
-                MessageBox.Show("DEBUG333");
-                setResults(searchComboThree(lname_box.Text.Trim(), blood_type_box.Text.Trim()));
-            }
+                setResults(searchComboFour(lname_box.Text.Trim(), blood_type_box.Text.Trim()));
+            else if ((fname_box.Text.Trim() != string.Empty) && (city_box.Text.Trim() != string.Empty))
+                setResults(searchComboFive(fname_box.Text.Trim(), city_box.Text.Trim()));
+            else if ((fname_box.Text.Trim() != string.Empty) && (state_box.Text.Trim() != string.Empty))
+                setResults(searchComboSix(fname_box.Text.Trim(), state_box.Text.Trim()));
+            else if ((fname_box.Text.Trim() != string.Empty) && (blood_type_box.Text.Trim() != string.Empty))
+                setResults(searchComboSeven(fname_box.Text.Trim(), blood_type_box.Text.Trim()));
             else
             {
                 MessageBox.Show("Information not properly inserted");
                 return;
             }
+
 
 
             
@@ -95,13 +89,29 @@ namespace CS408Project
 
         private IEnumerable<Donors> searchComboFour(string lname, string type)
         {
-            return list.Where(test => test.LName.Equals(lname) && test.City.Equals(type));
+            return list.Where(test => test.LName.Equals(lname) && test.BloodType.Equals(type));
+        }
+
+        private IEnumerable<Donors> searchComboFive(string fname, string type)
+        {
+            return list.Where(test => test.FName.Equals(fname) && test.City.Equals(type));
+        }
+
+        private IEnumerable<Donors> searchComboSix(string fname, string type)
+        {
+            return list.Where(test => test.FName.Equals(fname) && test.City.Equals(type));
+        }
+
+        private IEnumerable<Donors> searchComboSeven(string fname, string type)
+        {
+            return list.Where(test => test.FName.Equals(fname) && test.City.Equals(type));
         }
 
         private void setResults(IEnumerable<Donors> temp)
         {
             if (search_listview != null)
                 search_listview.Items.Clear();
+
             ListViewItem list_view;
 
             foreach (Donors d in temp)
@@ -126,6 +136,10 @@ namespace CS408Project
             }
         }
 
+        private void Search_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 

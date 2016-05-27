@@ -161,11 +161,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1683, 1079);
             this.Controls.Add(this.main_label);
             this.Controls.Add(this.donor_panel);
             this.Name = "UserOperations";
             this.Text = "Blood Bank Database";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserOperations_FormClosed);
             this.donor_panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

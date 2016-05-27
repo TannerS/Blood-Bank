@@ -14,7 +14,6 @@ namespace CS408Project
     {
         private List<Donors> list;
         
-
         public Register()
         {
             InitializeComponent();
@@ -42,15 +41,14 @@ namespace CS408Project
 
         private void create_button_Click(object sender, EventArgs e)
         {
-            
-
-
             Donors donor = new Donors();
 
-            short  age;
+            short age = 3;
+
             if (Int16.TryParse(age_box.Text.Trim(), out age))
             {
                 short amount;
+
                 if (Int16.TryParse(amount_donated_box.Text.Trim(), out amount))
                 {
                     donor.FName = fname_box.Text.Trim();
@@ -125,6 +123,11 @@ namespace CS408Project
         private void pos_radio_button_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Register_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

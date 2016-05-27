@@ -97,6 +97,7 @@
             this.Controls.Add(this.register_button);
             this.Name = "Main";
             this.Text = "Management System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.ResumeLayout(false);
 
         }
